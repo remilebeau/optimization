@@ -84,7 +84,7 @@ export default function OptimizationForm() {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-col gap-4 sm:grid sm:grid-cols-2"
+            className="flex flex-col gap-4 sm:grid sm:grid-cols-3"
           >
             <FieldWithLabel
               label="Mon Staff Required"
@@ -158,7 +158,7 @@ export default function OptimizationForm() {
               placeholder="Enter 'i' for no limit"
             />
 
-            <Button className="rounded-xl sm:col-span-2" type="submit">
+            <Button className="rounded-xl sm:col-span-3" type="submit">
               Minimize
             </Button>
           </form>
