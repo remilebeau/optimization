@@ -71,7 +71,6 @@ export default function OptimizationForm() {
 
   return (
     <>
-      <OptimizationInstructions />
       {isLoading && <Loader />}
       {errMsg && <p className="text-red-500">{errMsg}</p>}
       {optimalSolution && !errMsg && (
@@ -81,7 +80,7 @@ export default function OptimizationForm() {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-col gap-4 rounded-xl border p-4 sm:grid sm:grid-cols-2"
+            className="flex flex-col gap-4 sm:grid sm:grid-cols-2"
           >
             <FieldWithLabel
               label="Mon Staff Required"

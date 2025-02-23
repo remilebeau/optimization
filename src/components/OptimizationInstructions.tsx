@@ -1,6 +1,6 @@
 export default function OptimizationInstructions() {
   return (
-    <section className="flex flex-col gap-4 rounded-xl border p-4 text-center font-bold italic">
+    <section className="flex flex-col gap-4 text-center font-bold italic">
       {/* OBJECTIVE FUNCTION */}
       <h1 className="text-xl">Minimize:</h1>
       <var className="text-green-500">X1 + X2 + X3 + X4 + X5 + X6 + X7</var>
