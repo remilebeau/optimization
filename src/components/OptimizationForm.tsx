@@ -39,34 +39,38 @@ export default function OptimizationForm() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log({ values });
     setIsLoading(true);
-    const data = await optimization(
-      values.monReq,
-      values.tueReq,
-      values.wedReq,
-      values.thuReq,
-      values.friReq,
-      values.satReq,
-      values.sunReq,
-      values.x1Max,
-      values.x2Max,
-      values.x3Max,
-      values.x4Max,
-      values.x5Max,
-      values.x6Max,
-      values.x7Max,
-    );
-    if (!data) {
-      setErrMsg(
-        "No solution found. Please adjust the constraints and try again.",
-      );
-      setIsLoading(false);
-      return;
-    }
 
-    setOptimalSolution(data);
-    setErrMsg("");
-    setIsLoading(false);
+    try {
+      const data = await optimization(
+        values.monReq,
+        values.tueReq,
+        values.wedReq,
+        values.thuReq,
+        values.friReq,
+        values.satReq,
+        values.sunReq,
+        values.x1Max,
+        values.x2Max,
+        values.x3Max,
+        values.x4Max,
+        values.x5Max,
+        values.x6Max,
+        values.x7Max,
+      );
+      if (!data) {
+        setErrMsg(
+          "No solution found. Please adjust the constraints and try again.",
+        );
+      }
+      setOptimalSolution(data);
+    } catch (error) {
+      setErrMsg("Something went wrong. Please try again.");
+      return;
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (
