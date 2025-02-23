@@ -5,7 +5,7 @@ type Props = {
 
 export default function OptimizationResults({ optimalSolution }: Props) {
   return (
-    <section className="flex flex-col gap-4 rounded-xl border p-4 text-center font-bold italic">
+    <section className="flex flex-col gap-4 text-center font-bold italic">
       <p className="text-center font-bold text-green-500 sm:text-xl">
         Minimum staff required:{" "}
         {optimalSolution.minStaff.toLocaleString("en-US")}

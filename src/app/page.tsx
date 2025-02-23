@@ -1,4 +1,3 @@
-"use client";
 import OptimizationForm from "@/components/OptimizationForm";
 import OptimizationInstructions from "@/components/OptimizationInstructions";
 

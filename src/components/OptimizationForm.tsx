@@ -1,3 +1,4 @@
+"use client";
 import { Form } from "@/components/ui/form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -6,7 +7,6 @@ import optimization from "@/lib/optimization";
 import OptimizationResults from "@/components/OptimizationResults";
 import Loader from "@/components/Loader";
 import { Button } from "@/components/ui/button";
-import OptimizationInstructions from "@/components/OptimizationInstructions";
 import FieldWithLabel from "@/components/FieldWithLabel";
 import { useState } from "react";
 import type { OptimalSolution } from "@/types/OptimalSolution";
