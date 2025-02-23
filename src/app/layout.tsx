@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Simulation | Wes S",
-  description: "Simulation model by Wes S",
+  title: "Optimization | Wes S",
+  description: "Optimization model by Wes S",
 };
 
 export default function RootLayout({
