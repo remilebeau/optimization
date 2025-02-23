@@ -84,6 +84,12 @@ export default function OptimizationInstructions() {
           </li>
         </ul>
       </ul>
+      {/* LEGEND */}
+      <ul className="mx-auto flex flex-col sm:flex-row sm:gap-12 sm:text-left">
+        <li className="text-green-500">Decision Variable</li>
+        <li className="text-blue-500">Constraint LHS</li>
+        <li className="text-red-500">Constraint RHS</li>
+      </ul>
       <p>
         Set the <span className="text-red-500">constraints</span> using the form
         below:
