@@ -15,7 +15,7 @@ export async function optimization(
   x5Max: number | string,
   x6Max: number | string,
   x7Max: number | string,
-): Promise<OptimalSolution | null> {
+): Promise<OptimalSolution> {
   const DATA_URL =
     process.env.NODE_ENV === "production"
       ? "https://simulation-api-rsaw.onrender.com/api/optimizations/staffing"
@@ -42,7 +42,7 @@ export async function optimization(
       x7Max,
     }),
   });
-  if (!res.ok) return null;
+  if (!res.ok) throw new Error("Something went wrong. Please try again.");
   const data = await res.json();
   return data;
 }

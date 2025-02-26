@@ -29,55 +29,39 @@ export default function OptimizationForm() {
     x7Max: z.coerce.number().int().gte(0).or(z.literal("i")),
   });
 
-  const [errMsg, setErrMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [optimalSolution, setOptimalSolution] =
-    useState<OptimalSolution | null>();
+  const [optimalSolution, setOptimalSolution] = useState<OptimalSolution>();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log({ values });
     setIsLoading(true);
-
-    try {
-      const data = await optimization(
-        values.monReq,
-        values.tueReq,
-        values.wedReq,
-        values.thuReq,
-        values.friReq,
-        values.satReq,
-        values.sunReq,
-        values.x1Max,
-        values.x2Max,
-        values.x3Max,
-        values.x4Max,
-        values.x5Max,
-        values.x6Max,
-        values.x7Max,
-      );
-      if (!data) {
-        setErrMsg(
-          "No solution found. Please adjust the constraints and try again.",
-        );
-      }
-      setOptimalSolution(data);
-    } catch (error) {
-      setErrMsg("Something went wrong. Please try again.");
-      return;
-    } finally {
-      setIsLoading(false);
-    }
+    const data = await optimization(
+      values.monReq,
+      values.tueReq,
+      values.wedReq,
+      values.thuReq,
+      values.friReq,
+      values.satReq,
+      values.sunReq,
+      values.x1Max,
+      values.x2Max,
+      values.x3Max,
+      values.x4Max,
+      values.x5Max,
+      values.x6Max,
+      values.x7Max,
+    );
+    setOptimalSolution(data);
+    setIsLoading(false);
   }
 
   return (
     <>
       {isLoading && <Loader />}
-      {errMsg && <p className="text-red-500">{errMsg}</p>}
-      {optimalSolution && !errMsg && (
+      {optimalSolution && (
         <OptimizationResults optimalSolution={optimalSolution} />
       )}
       {!isLoading && (
