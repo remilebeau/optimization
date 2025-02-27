@@ -68,40 +68,40 @@ export default function OptimizationForm() {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-col gap-4 sm:grid sm:grid-cols-3"
+            className="flex flex-col gap-4 italic text-red-500 sm:grid sm:grid-cols-3"
           >
             <FieldWithLabel
-              label="Mon Staff Required"
+              label="Mon Required"
               name="monReq"
               placeholder="Staff required every Monday"
             />
             <FieldWithLabel
-              label="Tue Staff Required"
+              label="Tue Required"
               name="tueReq"
               placeholder="Staff required every Tuesday"
             />
             <FieldWithLabel
-              label="Wed Staff Required"
+              label="Wed Required"
               name="wedReq"
               placeholder="Staff required every Wednesday"
             />
             <FieldWithLabel
-              label="Thu Staff Required"
+              label="Thu Required"
               name="thuReq"
               placeholder="Staff required every Thursday"
             />
             <FieldWithLabel
-              label="Fri Staff Required"
+              label="Fri Required"
               name="friReq"
               placeholder="Staff required every Friday"
             />
             <FieldWithLabel
-              label="Sat Staff Required"
+              label="Sat Required"
               name="satReq"
               placeholder="Staff required every Saturday"
             />
             <FieldWithLabel
-              label="Sun Staff Required"
+              label="Sun Required"
               name="sunReq"
               placeholder="Staff required every Sunday"
             />
@@ -109,37 +109,37 @@ export default function OptimizationForm() {
             <FieldWithLabel
               label="X1Max"
               name="x1Max"
-              placeholder="Enter 'i' for no limit"
+              placeholder="Enter 'i' for no max"
             />
             <FieldWithLabel
               label="X2Max"
               name="x2Max"
-              placeholder="Enter 'i' for no limit"
+              placeholder="Enter 'i' for no max"
             />
             <FieldWithLabel
               label="X3Max"
               name="x3Max"
-              placeholder="Enter 'i' for no limit"
+              placeholder="Enter 'i' for no max"
             />
             <FieldWithLabel
               label="X4Max"
               name="x4Max"
-              placeholder="Enter 'i' for no limit"
+              placeholder="Enter 'i' for no max"
             />
             <FieldWithLabel
               label="X5Max"
               name="x5Max"
-              placeholder="Enter 'i' for no limit"
+              placeholder="Enter 'i' for no max"
             />
             <FieldWithLabel
               label="X6Max"
               name="x6Max"
-              placeholder="Enter 'i' for no limit"
+              placeholder="Enter 'i' for no max"
             />
             <FieldWithLabel
               label="X7Max"
               name="x7Max"
-              placeholder="Enter 'i' for no limit"
+              placeholder="Enter 'i' for no max"
             />
 
             <Button className="rounded-xl sm:col-span-3" type="submit">
