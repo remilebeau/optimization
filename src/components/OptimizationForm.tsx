@@ -67,156 +67,159 @@ export default function OptimizationForm() {
       )}
       {!isLoading && (
         <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-col gap-4 italic text-red-500"
-            // className="flex flex-col gap-4 italic text-red-500 sm:grid sm:grid-cols-3"
-          >
-            <Label>Mon Required</Label>
-            <FormField
-              control={form.control}
-              name="monReq"
-              render={({ field }) => (
-                <FormControl>
-                  <Input className="rounded-xl" {...field} />
-                </FormControl>
-              )}
-            />
-            <Label>Tue Required</Label>
-            <FormField
-              control={form.control}
-              name="tueReq"
-              render={({ field }) => (
-                <FormControl>
-                  <Input className="rounded-xl" {...field} />
-                </FormControl>
-              )}
-            />
-            <Label>Wed Required</Label>
-            <FormField
-              control={form.control}
-              name="wedReq"
-              render={({ field }) => (
-                <FormControl>
-                  <Input className="rounded-xl" {...field} />
-                </FormControl>
-              )}
-            />
-            <Label>Thu Required</Label>
-            <FormField
-              control={form.control}
-              name="thuReq"
-              render={({ field }) => (
-                <FormControl>
-                  <Input className="rounded-xl" {...field} />
-                </FormControl>
-              )}
-            />
-            <Label>Fri Required</Label>
-            <FormField
-              control={form.control}
-              name="friReq"
-              render={({ field }) => (
-                <FormControl>
-                  <Input className="rounded-xl" {...field} />
-                </FormControl>
-              )}
-            />
-            <Label>Sat Required</Label>
-            <FormField
-              control={form.control}
-              name="satReq"
-              render={({ field }) => (
-                <FormControl>
-                  <Input className="rounded-xl" {...field} />
-                </FormControl>
-              )}
-            />
-            <Label>Sun Required</Label>
-            <FormField
-              control={form.control}
-              name="sunReq"
-              render={({ field }) => (
-                <FormControl>
-                  <Input className="rounded-xl" {...field} />
-                </FormControl>
-              )}
-            />
-            <Label>X1Max</Label>
-            <FormField
-              control={form.control}
-              name="x1Max"
-              render={({ field }) => (
-                <FormControl>
-                  <Input className="rounded-xl" {...field} />
-                </FormControl>
-              )}
-            />
-            <Label>X2Max</Label>
-            <FormField
-              control={form.control}
-              name="x2Max"
-              render={({ field }) => (
-                <FormControl>
-                  <Input className="rounded-xl" {...field} />
-                </FormControl>
-              )}
-            />
-            <Label>X3Max</Label>
-            <FormField
-              control={form.control}
-              name="x3Max"
-              render={({ field }) => (
-                <FormControl>
-                  <Input className="rounded-xl" {...field} />
-                </FormControl>
-              )}
-            />
-            <Label>X4Max</Label>
-            <FormField
-              control={form.control}
-              name="x4Max"
-              render={({ field }) => (
-                <FormControl>
-                  <Input className="rounded-xl" {...field} />
-                </FormControl>
-              )}
-            />
-            <Label>X5Max</Label>
-            <FormField
-              control={form.control}
-              name="x5Max"
-              render={({ field }) => (
-                <FormControl>
-                  <Input className="rounded-xl" {...field} />
-                </FormControl>
-              )}
-            />
-            <Label>X6Max</Label>
-            <FormField
-              control={form.control}
-              name="x6Max"
-              render={({ field }) => (
-                <FormControl>
-                  <Input className="rounded-xl" {...field} />
-                </FormControl>
-              )}
-            />
-            <Label>X7Max</Label>
-            <FormField
-              control={form.control}
-              name="x7Max"
-              render={({ field }) => (
-                <FormControl>
-                  <Input className="rounded-xl" {...field} />
-                </FormControl>
-              )}
-            />
-
-            <Button className="rounded-xl sm:col-span-3" type="submit">
-              Minimize
-            </Button>
+          <form className="flex flex-col justify-around gap-4 italic text-red-500 sm:flex-row">
+            <section className="flex flex-col gap-4">
+              <Label>Mon Required</Label>
+              <FormField
+                control={form.control}
+                name="monReq"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input className="rounded-xl" {...field} />
+                  </FormControl>
+                )}
+              />
+              <Label>Tue Required</Label>
+              <FormField
+                control={form.control}
+                name="tueReq"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input className="rounded-xl" {...field} />
+                  </FormControl>
+                )}
+              />
+              <Label>Wed Required</Label>
+              <FormField
+                control={form.control}
+                name="wedReq"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input className="rounded-xl" {...field} />
+                  </FormControl>
+                )}
+              />
+              <Label>Thu Required</Label>
+              <FormField
+                control={form.control}
+                name="thuReq"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input className="rounded-xl" {...field} />
+                  </FormControl>
+                )}
+              />
+              <Label>Fri Required</Label>
+              <FormField
+                control={form.control}
+                name="friReq"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input className="rounded-xl" {...field} />
+                  </FormControl>
+                )}
+              />
+              <Label>Sat Required</Label>
+              <FormField
+                control={form.control}
+                name="satReq"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input className="rounded-xl" {...field} />
+                  </FormControl>
+                )}
+              />
+              <Label>Sun Required</Label>
+              <FormField
+                control={form.control}
+                name="sunReq"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input className="rounded-xl" {...field} />
+                  </FormControl>
+                )}
+              />
+            </section>
+            <section className="flex flex-col gap-4">
+              <Label>X1Max</Label>
+              <FormField
+                control={form.control}
+                name="x1Max"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input className="rounded-xl" {...field} />
+                  </FormControl>
+                )}
+              />
+              <Label>X2Max</Label>
+              <FormField
+                control={form.control}
+                name="x2Max"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input className="rounded-xl" {...field} />
+                  </FormControl>
+                )}
+              />
+              <Label>X3Max</Label>
+              <FormField
+                control={form.control}
+                name="x3Max"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input className="rounded-xl" {...field} />
+                  </FormControl>
+                )}
+              />
+              <Label>X4Max</Label>
+              <FormField
+                control={form.control}
+                name="x4Max"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input className="rounded-xl" {...field} />
+                  </FormControl>
+                )}
+              />
+              <Label>X5Max</Label>
+              <FormField
+                control={form.control}
+                name="x5Max"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input className="rounded-xl" {...field} />
+                  </FormControl>
+                )}
+              />
+              <Label>X6Max</Label>
+              <FormField
+                control={form.control}
+                name="x6Max"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input className="rounded-xl" {...field} />
+                  </FormControl>
+                )}
+              />
+              <Label>X7Max</Label>
+              <FormField
+                control={form.control}
+                name="x7Max"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input className="rounded-xl" {...field} />
+                  </FormControl>
+                )}
+              />
+            </section>
           </form>
+          <Button
+            onClick={form.handleSubmit(onSubmit)}
+            className="rounded-xl"
+            type="submit"
+          >
+            Minimize
+          </Button>
         </Form>
       )}
     </>
