@@ -1,5 +1,6 @@
 "use client";
-import { Form } from "@/components/ui/form";
+import { Form, FormControl, FormField } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -7,9 +8,9 @@ import optimization from "@/lib/optimization";
 import OptimizationResults from "@/components/OptimizationResults";
 import Loader from "@/components/Loader";
 import { Button } from "@/components/ui/button";
-import FieldWithLabel from "@/components/FieldWithLabel";
 import { useState } from "react";
 import type { OptimalSolution } from "@/types/OptimalSolution";
+import { Label } from "@/components/ui/label";
 
 export default function OptimizationForm() {
   const formSchema = z.object({
@@ -68,78 +69,148 @@ export default function OptimizationForm() {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-col gap-4 italic text-red-500 sm:grid sm:grid-cols-3"
+            className="flex flex-col gap-4 italic text-red-500"
+            // className="flex flex-col gap-4 italic text-red-500 sm:grid sm:grid-cols-3"
           >
-            <FieldWithLabel
-              label="Mon Required"
+            <Label>Mon Required</Label>
+            <FormField
+              control={form.control}
               name="monReq"
-              placeholder="Staff required every Monday"
+              render={({ field }) => (
+                <FormControl>
+                  <Input className="rounded-xl" {...field} />
+                </FormControl>
+              )}
             />
-            <FieldWithLabel
-              label="Tue Required"
+            <Label>Tue Required</Label>
+            <FormField
+              control={form.control}
               name="tueReq"
-              placeholder="Staff required every Tuesday"
+              render={({ field }) => (
+                <FormControl>
+                  <Input className="rounded-xl" {...field} />
+                </FormControl>
+              )}
             />
-            <FieldWithLabel
-              label="Wed Required"
+            <Label>Wed Required</Label>
+            <FormField
+              control={form.control}
               name="wedReq"
-              placeholder="Staff required every Wednesday"
+              render={({ field }) => (
+                <FormControl>
+                  <Input className="rounded-xl" {...field} />
+                </FormControl>
+              )}
             />
-            <FieldWithLabel
-              label="Thu Required"
+            <Label>Thu Required</Label>
+            <FormField
+              control={form.control}
               name="thuReq"
-              placeholder="Staff required every Thursday"
+              render={({ field }) => (
+                <FormControl>
+                  <Input className="rounded-xl" {...field} />
+                </FormControl>
+              )}
             />
-            <FieldWithLabel
-              label="Fri Required"
+            <Label>Fri Required</Label>
+            <FormField
+              control={form.control}
               name="friReq"
-              placeholder="Staff required every Friday"
+              render={({ field }) => (
+                <FormControl>
+                  <Input className="rounded-xl" {...field} />
+                </FormControl>
+              )}
             />
-            <FieldWithLabel
-              label="Sat Required"
+            <Label>Sat Required</Label>
+            <FormField
+              control={form.control}
               name="satReq"
-              placeholder="Staff required every Saturday"
+              render={({ field }) => (
+                <FormControl>
+                  <Input className="rounded-xl" {...field} />
+                </FormControl>
+              )}
             />
-            <FieldWithLabel
-              label="Sun Required"
+            <Label>Sun Required</Label>
+            <FormField
+              control={form.control}
               name="sunReq"
-              placeholder="Staff required every Sunday"
+              render={({ field }) => (
+                <FormControl>
+                  <Input className="rounded-xl" {...field} />
+                </FormControl>
+              )}
             />
-
-            <FieldWithLabel
-              label="X1Max"
+            <Label>X1Max</Label>
+            <FormField
+              control={form.control}
               name="x1Max"
-              placeholder="Enter 'i' for no max"
+              render={({ field }) => (
+                <FormControl>
+                  <Input className="rounded-xl" {...field} />
+                </FormControl>
+              )}
             />
-            <FieldWithLabel
-              label="X2Max"
+            <Label>X2Max</Label>
+            <FormField
+              control={form.control}
               name="x2Max"
-              placeholder="Enter 'i' for no max"
+              render={({ field }) => (
+                <FormControl>
+                  <Input className="rounded-xl" {...field} />
+                </FormControl>
+              )}
             />
-            <FieldWithLabel
-              label="X3Max"
+            <Label>X3Max</Label>
+            <FormField
+              control={form.control}
               name="x3Max"
-              placeholder="Enter 'i' for no max"
+              render={({ field }) => (
+                <FormControl>
+                  <Input className="rounded-xl" {...field} />
+                </FormControl>
+              )}
             />
-            <FieldWithLabel
-              label="X4Max"
+            <Label>X4Max</Label>
+            <FormField
+              control={form.control}
               name="x4Max"
-              placeholder="Enter 'i' for no max"
+              render={({ field }) => (
+                <FormControl>
+                  <Input className="rounded-xl" {...field} />
+                </FormControl>
+              )}
             />
-            <FieldWithLabel
-              label="X5Max"
+            <Label>X5Max</Label>
+            <FormField
+              control={form.control}
               name="x5Max"
-              placeholder="Enter 'i' for no max"
+              render={({ field }) => (
+                <FormControl>
+                  <Input className="rounded-xl" {...field} />
+                </FormControl>
+              )}
             />
-            <FieldWithLabel
-              label="X6Max"
+            <Label>X6Max</Label>
+            <FormField
+              control={form.control}
               name="x6Max"
-              placeholder="Enter 'i' for no max"
+              render={({ field }) => (
+                <FormControl>
+                  <Input className="rounded-xl" {...field} />
+                </FormControl>
+              )}
             />
-            <FieldWithLabel
-              label="X7Max"
+            <Label>X7Max</Label>
+            <FormField
+              control={form.control}
               name="x7Max"
-              placeholder="Enter 'i' for no max"
+              render={({ field }) => (
+                <FormControl>
+                  <Input className="rounded-xl" {...field} />
+                </FormControl>
+              )}
             />
 
             <Button className="rounded-xl sm:col-span-3" type="submit">
