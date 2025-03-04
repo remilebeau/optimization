@@ -69,6 +69,106 @@ export default function OptimizationForm() {
         <Form {...form}>
           <form className="flex flex-col justify-around gap-4 italic text-red-500 sm:flex-row">
             <section className="flex flex-col gap-4">
+              <Label>X1Max</Label>
+              <FormField
+                control={form.control}
+                name="x1Max"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input
+                      placeholder="Enter i for unbounded"
+                      className="rounded-xl"
+                      {...field}
+                    />
+                  </FormControl>
+                )}
+              />
+              <Label>X2Max</Label>
+              <FormField
+                control={form.control}
+                name="x2Max"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input
+                      placeholder="Enter i for unbounded"
+                      className="rounded-xl"
+                      {...field}
+                    />
+                  </FormControl>
+                )}
+              />
+              <Label>X3Max</Label>
+              <FormField
+                control={form.control}
+                name="x3Max"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input
+                      placeholder="Enter i for unbounded"
+                      className="rounded-xl"
+                      {...field}
+                    />
+                  </FormControl>
+                )}
+              />
+              <Label>X4Max</Label>
+              <FormField
+                control={form.control}
+                name="x4Max"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input
+                      placeholder="Enter i for unbounded"
+                      className="rounded-xl"
+                      {...field}
+                    />
+                  </FormControl>
+                )}
+              />
+              <Label>X5Max</Label>
+              <FormField
+                control={form.control}
+                name="x5Max"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input
+                      placeholder="Enter i for unbounded"
+                      className="rounded-xl"
+                      {...field}
+                    />
+                  </FormControl>
+                )}
+              />
+              <Label>X6Max</Label>
+              <FormField
+                control={form.control}
+                name="x6Max"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input
+                      placeholder="Enter i for unbounded"
+                      className="rounded-xl"
+                      {...field}
+                    />
+                  </FormControl>
+                )}
+              />
+              <Label>X7Max</Label>
+              <FormField
+                control={form.control}
+                name="x7Max"
+                render={({ field }) => (
+                  <FormControl>
+                    <Input
+                      placeholder="Enter i for unbounded"
+                      className="rounded-xl"
+                      {...field}
+                    />
+                  </FormControl>
+                )}
+              />
+            </section>
+            <section className="flex flex-col gap-4">
               <Label>Mon Required</Label>
               <FormField
                 control={form.control}
@@ -133,78 +233,6 @@ export default function OptimizationForm() {
               <FormField
                 control={form.control}
                 name="sunReq"
-                render={({ field }) => (
-                  <FormControl>
-                    <Input className="rounded-xl" {...field} />
-                  </FormControl>
-                )}
-              />
-            </section>
-            <section className="flex flex-col gap-4">
-              <Label>X1Max</Label>
-              <FormField
-                control={form.control}
-                name="x1Max"
-                render={({ field }) => (
-                  <FormControl>
-                    <Input className="rounded-xl" {...field} />
-                  </FormControl>
-                )}
-              />
-              <Label>X2Max</Label>
-              <FormField
-                control={form.control}
-                name="x2Max"
-                render={({ field }) => (
-                  <FormControl>
-                    <Input className="rounded-xl" {...field} />
-                  </FormControl>
-                )}
-              />
-              <Label>X3Max</Label>
-              <FormField
-                control={form.control}
-                name="x3Max"
-                render={({ field }) => (
-                  <FormControl>
-                    <Input className="rounded-xl" {...field} />
-                  </FormControl>
-                )}
-              />
-              <Label>X4Max</Label>
-              <FormField
-                control={form.control}
-                name="x4Max"
-                render={({ field }) => (
-                  <FormControl>
-                    <Input className="rounded-xl" {...field} />
-                  </FormControl>
-                )}
-              />
-              <Label>X5Max</Label>
-              <FormField
-                control={form.control}
-                name="x5Max"
-                render={({ field }) => (
-                  <FormControl>
-                    <Input className="rounded-xl" {...field} />
-                  </FormControl>
-                )}
-              />
-              <Label>X6Max</Label>
-              <FormField
-                control={form.control}
-                name="x6Max"
-                render={({ field }) => (
-                  <FormControl>
-                    <Input className="rounded-xl" {...field} />
-                  </FormControl>
-                )}
-              />
-              <Label>X7Max</Label>
-              <FormField
-                control={form.control}
-                name="x7Max"
                 render={({ field }) => (
                   <FormControl>
                     <Input className="rounded-xl" {...field} />
